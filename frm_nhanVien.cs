@@ -21,8 +21,7 @@ namespace btb5
             employees = employee;
 
             if (employees != null)
-            {
-                // Hiển thị thông tin nhân viên nếu đang sửa
+            {          
                 txtMSNV.Text = employee.MSNV;
                 txtTen.Text = employee.Name;
                 txtLuong.Text = employee.LuongCB.ToString();
@@ -31,7 +30,7 @@ namespace btb5
 
         private void btnDongY_Click(object sender, EventArgs e)
         {
-            if (employees == null) // Trường hợp thêm mới
+            if (employees == null) 
             {
                 employees newEmployee = new employees
                 {
@@ -40,7 +39,7 @@ namespace btb5
                     LuongCB = double.Parse(txtLuong.Text)
                 };
 
-                form1s.employee.Add(newEmployee); // Thêm vào danh sách
+                form1s.employee.Add(newEmployee); 
             }
             else // Trường hợp sửa
             {
@@ -49,13 +48,13 @@ namespace btb5
                 employees.LuongCB = double.Parse(txtLuong.Text);
             }
 
-            form1s.RefreshGridView(); // Làm mới DataGridView
-            this.Close(); // Đóng Form2
+            form1s.RefreshGridView(); 
+            this.Close(); 
         }
 
         private void btnBoQua_Click(object sender, EventArgs e)
         {
-            this.Close(); // Đóng Form2 mà không làm gì
+            this.Close(); 
         }
 
     }
