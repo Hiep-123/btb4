@@ -46,7 +46,7 @@ namespace btb5
                 employees selectedEmployee = employee[index];
 
                 frm_nhanVien form2 = new frm_nhanVien(this, selectedEmployee);
-                form2.ShowDialog(); // Hiển thị Form2 dưới dạng modal
+                form2.ShowDialog();
             }
             else
             {
